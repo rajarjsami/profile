@@ -30,7 +30,7 @@ import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
         </div>
 
         {/* Hamburger Icon */}
-        <div className='md:hidden text-white text-3xl bg-slate-800 rounded-full p-2 ml-20 mb-52 float-left' onClick={() => setMenuOpen(!menuOpen)}>
+        <div className='md:hidden menuIcon text-white text-3xl bg-slate-800 rounded-full p-2 ml-20 mb-52 float-left' onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
         </div>
       </div>

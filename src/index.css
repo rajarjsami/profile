@@ -69,3 +69,23 @@ section {
     width: 100%;
   }
 }
+@media (min-height: 844px){
+  .top-header{
+    height: 100px;
+    display: flex;
+  }
+
+  .menuIcon  {
+    margin-top: 190px;
+    float: right;
+    background-color: rgb(0, 0, 0);
+  }
+  .nav{
+    background-color: #3b82f6;
+    height: 250px;
+    position: relative;
+    width: 100%;
+    margin-top: 85px;
+    float: left;
+  }
+}
