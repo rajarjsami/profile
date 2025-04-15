@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>hcoinfinancial.com - Maintenance</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d0d2b;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #3b82f6;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .timer div {
+      background-color: #1e293b;
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 500px) {
+      .timer {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>hcoinfinancial.com</h1>
+    <p>
+        The website is temporarily offline. We are currently working on it and it will be back soon.<br />
+        We will keep you updated.<br /><br />
+      
+        Le site est temporairement hors ligne. Nous y travaillons actuellement et il sera bientôt de retour.<br />
+        Nous vous tiendrons informés.
+      </p>
+      
+    <div class="timer" id="countdown">
+      <div><span id="days">0</span> Days</div>
+      <div><span id="hours">0</span> Hours</div>
+      <div><span id="minutes">0</span> Minutes</div>
+      <div><span id="seconds">0</span> Seconds</div>
+    </div>
+  </div>
+
+  <script>
+    const countdown = () => {
+      const now = new Date();
+      const futureDate = new Date('2025-04-25T00:00:00'); // 15 days from April 10, 2025
+      const diff = futureDate - now;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('days').innerText = days;
+      document.getElementById('hours').innerText = hours;
+      document.getElementById('minutes').innerText = minutes;
+      document.getElementById('seconds').innerText = seconds;
+    };
+
+    countdown();
+    setInterval(countdown, 1000);
+  </script>
+</body>
+</html>

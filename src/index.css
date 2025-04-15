@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+  }
+  body{
+    background-color: #0d0d2b;
+  }
+.slider{
+    background-image: url(./assets/images/wall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#skills{
+    background-image: url(./assets/images/chartbg.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+#contactus{
+    background-image: url(./assets/images/contactusbg.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Optional Tailwind fix */
+section {
+    scroll-margin-top: 80px; /* If your navbar height is 80px */
+  }
+  
+  .privacy-policy {
+    transition: all 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 2%;
+    opacity: 0.95;
+    left: 50%;
+    height: 590px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Hidden by default */
+  .privacy-policy.hide {
+    display: none;
+  }
+  
+  /* Show class makes it visible */
+  .privacy-policy.show {
+    display: block;
+  }
+  
+
+  /* Tablet size and up (≥768px) */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Desktop size and up (≥1024px) */
+@media (min-width: 1024px) {
+  .top-header{
+    width: 100%;
+  }
+}
