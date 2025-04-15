@@ -7,9 +7,16 @@ import { Link } from 'react-scroll';
 import React,  { useState } from 'react'
 import { GiSkills } from 'react-icons/gi'
 import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
+
   
   const Header =  ({ onPolicyClick }) =>  {
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const viewPDF = () => {
+      const pdfURL = encodeURIComponent('https://techtipsvideos.com/rjsami/Raja-RJSami-cv.pdf');
+      window.open(`https://docs.google.com/viewer?url=${pdfURL}&embedded=true`, '_blank');
+    };
+    
     return (
       <div className='top-header bg-blue-500 text-black p-3 flex justify-end '>
           {/* Logo */}
@@ -49,9 +56,15 @@ import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
             </Link>
           </li>
           <li className='m-1 hover:bg-blue-400 hover:rounded-md hover:p-0.5'>
-            <a href="#cv" className='flex items-center'>
-              <TbFileCv className='ml-2 m-1 text-[20px]' /> CV
-            </a>
+          <a onClick={viewPDF} className='flex items-center text-white cursor-pointer'>
+  <TbFileCv className='ml-2 m-1 text-[20px]' /> CV
+</a>
+         {/* <button
+  onClick={viewPDF}
+  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+>
+  View Resume
+</button> */}
           </li>
           <li className='m-1 hover:bg-blue-400 hover:rounded-md hover:p-0.5'>
             <Link to="products" smooth={true} duration={500} offset={-80} className='cursor-pointer flex items-center'>
